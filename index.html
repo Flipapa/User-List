@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="./index.css">
+  <title>Social Media List</title>
+</head>
+
+<body>
+  <!-- nav bar -->
+  <nav class="navbar navbar-dark bg-dark container-fluid" style="overflow: hidden; position: fixed; top: 0; z-index: 1">
+    <span class="navbar-brand m-2 h1">Tracking List</span>
+    <div class="form-inline">
+      <label class="text-light mr-2">Search</label>
+      <div class="seach-bar">
+        <input type="text" class="form-control" id="search-input" placeholder="User Name">
+      </div>
+    </div>
+  </nav>
+  <!-- Nav Pills -->
+  <ul class="nav nav-pills mr-4 mb-1 justify-content-end" id="pills-tab" style="margin-top: 90px;" role="tablist">
+    <li class="nav-item text-center" style="width:90px;" role="presentation">
+      <a class="nav-link active" id="pills-user-tab" data-toggle="pill" href="#pills-user" role="tab"
+        aria-controls="pills-user" aria-selected="true"><i class="fas fa-users"></i></a>
+    </li>
+    <li class="nav-item text-center" style="width:90px;" role="presentation">
+      <a class="nav-link" id="pills-target-tab" data-toggle="pill" href="#pills-target" role="tab"
+        aria-controls="pills-target" aria-selected="false"><i class="fas fa-crosshairs"></i></a>
+    </li>
+  </ul>
+  <!-- User Data -->
+  <div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-user" role="tabpanel" aria-labelledby="pills-user-tab">
+      <div class="container-fluid d-flex flex-wrap justify-content-center" id="user-panel">
+        <!-- user-data-here -->
+      </div>
+
+      <!-- Page Navigation -->
+      <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center" id="paginetor">
+
+        </ul>
+      </nav>
+    </div>
+    <div class="container tab-pane fade" id="pills-target" role="tabpanel" aria-labelledby="pills-target-tab">
+      <div class="row justify-content-around">
+        <div class="col-12 col-md-8 col-lg-5">
+          <h4>On Target</h4>
+          <ul class="list-group" id="target-panel" style="max-height: 480px; overflow: auto">
+            <!-- target data here -->
+          </ul>
+        </div>
+        <div class="col-12 col-md-8 col-lg-5">
+          <h4>Clear</h4>
+          <div class="list-group" id="clear-panel" style="max-height: 480px; overflow: auto">
+            <!-- clear data here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  User Modal -->
+  <div class="modal fade" id="user-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-secondary text-light">
+          <h5 class="user-title" id="user-modal-title">User Info</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="user-modal-body">
+          <div class="row justify-content-center">
+            <div class="col-sm-4" id="user-modal-image">
+              <img
+                src="https://github.com/ALPHACamp/movie-list-api/blob/master/public/posters/c9XxwwhPHdaImA2f1WEfEsbhaFB.jpg?raw=true"
+                alt="user-image" class="img-fluid">
+            </div>
+            <div class="col-sm-7">
+              <h5 id="user-modal-name">Name</h5>
+              <p><em id="user-modal-surname"></em></p>
+              <ul id="user-modal-description">
+
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer d-flex justify-content-between">
+          <span class="ml-5" id="user-modal-status"><em></em></span>
+          <span>
+            <button type="button" class="btn" id="user-modal-edit"><i class="fas fa-crosshairs"></i></button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+    integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/2d2d25602c.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
